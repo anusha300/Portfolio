@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MADLIB</title>
+        <style>
+            @keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+    div {
+        text-align:center;
+        animation-duration: 2s;
+        animation-name: bounceIn;
+    
+}
+    #bigBox{
+    background-color:#EBC2C6;
+    width: 600px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 10px 15px 10px #586061;
+
+}
+  #goMad{
+  background-color:#C2C6EB;
+  border: none;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 50px;
+  width: 600px;
+  box-shadow: 10px 15px 10px #586061;
+
+  
+}
+  #refresh{
+   background-color: #C6EBC2; 
+   border: none;
+   color: hotpink;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin-top: 50px;
+   float:right;
+   width: 600px;
+   box-shadow: 10px 15px 10px #586061;
+            }
+
+            body{
+                background-color: #CDECF2;
+            }
+                
+           
+            
+            
+        
+        
+    </style>
+    
+    
+        
+        
+        
+    <script>
+     
+    function getRandomInt(min, max) {
+  		min = Math.ceil(min);
+  		max = Math.floor(max);
+  		return Math.floor(Math.random() * (max - min)) + min; 
+	}
+    
+    function getRandomPlanet(){
+		var planet = ["Jupiter", "Mars", "Saturn","Neptune","Mercury", "Venus"];
+		var number = getRandomInt(0, 5);
+        document.getElementById("planet").value = planet[number];
+	}
+    
+    function getRandomNoun2(){
+		var noun2 = ["iphones", "pianos", "fairy lights","prisons", "Costcos" , "tacos", "calculators", "erasers", "pillows"];
+		var number = getRandomInt(0, 8);
+        document.getElementById("noun2").value = noun2[number];
+	}
+    
+     function getRandomNoun3(){
+		var noun3 = ["fingers", "donkeys", "ice cream flavors","basketballs", "baby wipes" , "flowers", "rooms",];
+		var number = getRandomInt(0, 6);
+        document.getElementById("noun3").value =  noun3[number];
+	}
+    
+    function getRandomCreature(){
+    	var creature = ["dragon", "angel", "alien","mermaid", "unicorn" , "leprechaun", "troll"];
+		var number = getRandomInt(0, 6);
+        document.getElementById("creature").value = creature[number];
+    }
+    
+     function getRandomVerb(){
+    	var verb = ["pack", "scream", "die","dance", "eat" , "be a couch potato", "fart"];
+		var number = getRandomInt(0, 6);
+        document.getElementById("verb").value = verb[number];
+    }
+    
+    function getRandomfoodItem(){
+    	var foodItem = ["french fries", "pancakes", "thai food","Chipotle", "ice cream" , "pizza", "candy"];
+		var number = getRandomInt(0, 6);
+        document.getElementById("foodItem").value = foodItem[number];
+    }
+        
+     function getRandomLiquid(){
+    	var liquid = ["gasoline", "fanta", "blood","vodka", "nitrogen" , "tap water",];
+		var number = getRandomInt(0, 5);
+        document.getElementById("liquid").value = liquid[number];
+    }
+        
+     function getRandomCloth(){
+    	var cloth = ["underwears", "crop tops", "sweaters","shorts", "jeans" , "socks",];
+		var number = getRandomInt(0, 5);
+        document.getElementById("cloth").value = cloth[number];
+    }
+    
+     function getRandomGame(){
+    	var game = ["Jumanji", "Monopoly", "Jenga","Game of Life",];
+		var number = getRandomInt(0, 3);
+        document.getElementById("game").value = game[number];
+    }   
+    
+     function mad(){
+        var planet = document.getElementById("planet").value; 
+        var noun2 = document.getElementById("noun2").value; 
+        var noun3 = document.getElementById("noun3").value; 
+        var creature = document.getElementById("creature").value;
+        var verb = document.getElementById("verb").value;
+        var foodItem = document.getElementById("foodItem").value;
+        var liquid = document.getElementById("liquid").value;
+        var cloth = document.getElementById("cloth").value;
+        var game = document.getElementById("game").value
+       
+       
+    
+        
+        
+        var sentence = "Have you ever landed on "+ planet + "? I heard that there are many "+ noun2 + " and scary " + noun3 +" there."
+        var sentence2= "Maybe one day a(n) "+ creature + " will take over the Earth and we would all have to flee to "+ planet + ". In that case, we should "+ verb + " and be prepared."
+        var sentence3= "When we reach there, we should first make sure that we have plenty of "+ foodItem + " to eat and "+ liquid + " to drink. We would also want to make sure that we have proper "+ cloth+ " to wear."
+        var sentence4= " To prevent being bored, we should play "+ game + " . These are undoubtedly THE most important steps that we would have to follow if we wish to survive on "+ planet + "."
+        document.getElementById("madlib").innerHTML = sentence;
+        document.getElementById("madlib2").innerHTML= sentence2; 
+        document.getElementById("madlib3").innerHTML= sentence3; 
+        document.getElementById("madlib4").innerHTML= sentence4; 
+    
+    }
+    
+    function refreshed(){
+    
+   		 document.getElementById("planet").value = "";
+         document.getElementById("noun2").value = "";
+         document.getElementById("noun3").value = "";
+		 document.getElementById("creature").value = "";
+         document.getElementById("verb").value = "";
+         document.getElementById("foodItem").value = "";
+         document.getElementById("liquid").value = "";
+         document.getElementById("cloth").value = "";
+         document.getElementById("game").value = "";
+	
+	}
+        
+        
+    </script>
+        
+        
+
+            
+            
+            
+        
+    
+</head>
+    
+    <body>
+        
+        <div><h1>MADLIBS!!</h1></div>
+        
+        <div id = "bigBox">
+        <label> Name of a Planet </label>
+        
+        <input id = "planet"/ >
+        <button onClick="getRandomPlanet()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        <label> Plural Noun  </label> 
+        
+        <input id = "noun2"/ >
+        <button onClick="getRandomNoun2()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        <label>Another Plural Noun</label> 
+        
+        <input id = "noun3"/ >
+        <button onClick="getRandomNoun3()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        <label> Mythical Creature </label> 
+        
+        <input id = "creature"/ >
+        <button onClick="getRandomCreature()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        <label> Verb </label>
+        
+        <input id = "verb"/ >
+        <button onClick="getRandomVerb()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        
+        <label> Food Item (plural) </label>
+        
+        <input id = "foodItem"/ >
+        <button onClick="getRandomfoodItem()">Go Random</button>
+        
+        <br/>
+        <br/>
+        
+        
+        <label> Liquid </label>
+        
+        <input id = "liquid"/ >
+        <button onClick="getRandomLiquid()">Go Random</button>
+        <br/>
+        <br/>
+        
+        
+        <label> Clothing Item (plural)</label>
+        
+        <input id = "cloth"/ >
+        <button onClick="getRandomCloth()">Go Random</button>
+        <br/>
+        <br/>
+        
+        
+        <label> The Name of a Game </label>
+        
+        <input id = "game"/ >
+        <button onClick="getRandomGame()">Go Random</button>
+        <br/>
+        <br/>
+        </div>
+        
+        
+        
+        
+        <div id= "goMad">
+        <button onClick="mad()">Go Mad</button>
+        </div>
+        
+        <div id= "refresh">
+        <button onClick="refreshed()">Refresh</button>
+        </div>
+        
+        <p id = "madlib"> </p>
+        <p id = "madlib2"> </p>
+        <p id = "madlib3"> </p>
+        <p id = "madlib4"> </p>
+     
+     
+    </body>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html onclick = "jump()">
+
+<head>
+        
+        
+        
+        <style>
+           
+            html{
+                padding: 0;
+                margin: 0;
+             }
+            #game{
+                width: 500px;
+                height: 200px;
+                background-color:#C5D3B0;
+                position: relative;
+                left: 200px;
+                top: 70px;
+                
+                
+                
+                
+            
+            }
+            #outsideBox{
+                width: 900px;
+                height: 360px;
+                margin-top: 200px;
+                background-color:white;
+                position: relative;
+                left: 500px;
+                
+                
+            
+                
+              
+                
+            }
+
+            
+            .animate{
+                animation: jump 500ms;
+            }
+            
+            #character{
+                width: 20px;
+                height: 50px;
+                background-color: hotpink;
+                position: relative;
+                top: 150px;
+            }
+            #block{
+                width: 20px;
+                height: 20px;
+                background-color:#55966F;
+                position: relative;
+                top: 130px;
+                left: 480px; 
+                animation: block 1s infinite
+                linear;
+            }
+            @keyframes block{
+                0%{left: 480px;}
+                100%{left: -40px;}
+            }
+            @keyframes jump{
+                0%{top: 150px;}
+                30%{top: 100px;}
+                70%{top: 100px;}
+                100%{top: 150px;}
+            }
+           
+            body{
+                 background-image: url('leafWallpaper.jpg');
+            }
+            h1{
+                font-family:monospace;
+                font-size: 60px;
+                text-align: center;
+                margin-top:80px;
+                color:whitesmoke;
+                
+            
+            
+            }
+        
+        
+        </style>
+    
+    
+    
+</head>
+    
+    
+    
+<body>
+    
+    <h1> Jumpy Game :) </h1>
+    <div id = "outsideBox">
+    <div id = "game">
+        <div id = "character"></div>
+        <div id = "block"></div>
+    </div>
+    </div>
+    
+   
+    
+    
+    
+    
+    
+</body>
+     <script>
+            var character = document.getElementById("character");
+            var block = document.getElementById("block");
+            var counter = 0;
+            
+            function jump(){
+                counter++;
+                
+                
+                if(character.classList != ("animate")){
+                    character.classList.add("animate");} 
+                
+                
+                setTimeout(function(){
+                character.classList.remove("animate");
+                }, 500); 
+                }
+            
+         
+            var checkDead = setInterval ( function(){
+                var characterTop =
+                parseInt (window.getComputedStyle(character).getPropertyValue("top"));
+                
+                var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+                if(blockLeft<20 && blockLeft>0 && characterTop>= 130){
+                    block.style.animation = "nonse";
+                    block.style.display = "none";
+                    alert("You LOSE! Your score is: " + counter);
+                }
+            
+        
+            
+            },10);
+                
+        
+        
+        
+        
+        </script>
+    
+
+
+
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+             body{
+                background-image: url('Abstract.jpg');
+            }
+        
+            
+            img{
+                height: 30vh;
+                
+            }
+            .bigBox{
+                background-color:pink;
+                border-style:  10px solid black;
+                width: 450px;
+                height: 600px;
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                text-align: center;
+            }
+            h1{
+                text-align: center;
+                margin-top: 20px;
+                color: white; 
+                border:dotted pink 5px;
+                margin-left:720px;
+                margin-right:720px;
+                font-family:fantasy;
+                font-size: 40px;
+            }
+            .button1{
+                
+                box-shadow:inset 0px 1px 0px 0px #946987;
+
+                border-radius:6px;
+                background-color:pink;
+                border:3px dotted #edb2d1;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:Arial;
+                font-size:15px;
+                font-weight:bold;
+                padding:6px 24px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #c70067;
+                text-align: center;
+            }
+            .button1:hover {
+                background-color:hotpink;
+            }
+            .button1:active {
+                position:relative;
+                top:1px;
+            }
+
+                
+            }
+           
+        
+        
+        
+        </style>
+        <script>
+            
+            var topCounter= 0;
+            var bottomCounter= 0;
+             var shirts= 
+             ["Girls/Hogwarts.JPG","Girls/Checkers.jpg","Girls/Fanta.jpg","Girls/Hollister.jpg"];
+             
+             var pants= 
+             ["Girls/BlueShorts.jpg","Girls/BlueJean.jpg","Girls/India.JPG","Girls/DenimShorts.JPG"];
+            
+            
+            function nextTop(){
+                
+                if(topCounter == 4){
+                   topCounter = 0
+                }
+                      
+                topCounter = topCounter + 1 
+                
+                
+                document.getElementById("top").src= shirts[topCounter];
+            }
+            
+            
+            function nextBottom(){
+                 if(bottomCounter == 3){
+                    bottomCounter = 0
+            }
+                
+                
+                bottomCounter = bottomCounter + 1
+                
+               
+                document.getElementById("bottom").src= pants[bottomCounter];
+            }
+           
+            
+            function getRandomIntInclusive(min,max){
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min +  1)) + min; 
+                
+            }
+        
+            
+            function randomize(){
+                var randomNumberTop = getRandomIntInclusive(0,3);
+                var randomNumberBottom = getRandomIntInclusive(0,3);
+                document.getElementById("top").src= shirts[randomNumberTop];
+                document.getElementById("bottom").src= pants[randomNumberBottom];
+                
+                
+            }
+        
+    
+        
+         </script>
+    </head>
+    <body>
+        
+        <h1> OUTFIT PICKER </h1>
+        
+        <div class = "bigBox">
+        <img id= "top" src = "Girls/Hogwarts.JPG">
+        <br/> 
+        
+        <img id= "bottom" src= "Girls/DenimShorts.JPG">
+        <br/>
+        
+        <button class = "button1" onClick= "randomize()">Browse</button>
+        <button class = "button1" onClick="nextTop()"> Top </button>
+        <button class = "button1" onClick="nextBottom()"> Bottom </button>
+        
+        
+        </div>
+        
+    
+    
+    </body>
+    </html>

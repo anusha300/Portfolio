@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+             body{
+                  margin: 0;
+                }
+                .page{
+                  height: 100vh;
+                }
+                .green{
+                  background-color: #97D2BD;
+                }
+                .purple{
+                  background-color: #AF79A5;
+                }
+                #bigBox{
+                 position: absolute;
+                 width: 1225px;
+                 height: 727px;
+                }
+
+            .bg {
+                /* The image used */
+                background-image: url('Iceland.jpg');
+
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #header{
+                margin: 0;
+                text-align: center;
+                font-size: 100px;
+                font-family: sans-serif;
+                padding: 150px; 
+            }
+
+            .imageBox{
+                background-color: grey;
+                height: 41vh;
+                width: 41vh;
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                
+                
+            }   
+            
+            #imageBox1{
+                background-image: url('Madlibs.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            #imageBox2{
+                background-image: url('Outfits.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            #imageBox3{
+                background-image: url('Painting.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        
+            #imageBox4{
+                background-image: url('game.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            #project{
+                display: inline-block;
+                height: 85vh;
+                width: 48.5vw;
+                float: right; 
+                margin: 10px;
+                align-content: center;
+            }
+            
+            #contact{
+                display: inline-block;
+                height: 82.48vh;
+                width: 48.5vw;
+                background-color: white;
+                float: right;
+                margin: 10px;
+                align-content: center;
+                    
+            }
+            .row{
+                width: 100%;
+            }
+            .contact{font-family: Arial, Helvetica, sans-serif;}
+               * {box-sizing: border-box;}
+
+                input[type=text], select, textarea {
+                  width: 100%;
+                  padding: 12px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                  box-sizing: border-box;
+                  margin-top: 6px;
+                  margin-bottom: 16px;
+                  resize: vertical;
+                }
+
+                input[type=submit] {
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+
+                input[type=submit]:hover {
+                  background-color: #45a049;
+                }
+
+                .container {
+                  border-radius: 5px;
+                  background-color: #f2f2f2;
+                  padding: 20px;
+                }
+
+
+
+        
+        
+        
+        </style>
+        <script>
+        
+        
+        
+        
+        
+        
+        </script>
+    
+    
+    
+    </head>
+    
+    <body>
+        
+        <div class = "page green"> 
+          <div class="bg">
+              <h1 id = "header">Anusha's Portfolio</h1>
+            
+            </div>
+            
+
+  
+            
+        </div>
+        
+        <div class = "page purple">
+          <div id = "contact">
+               <h3>Contact Form</h3>
+
+       <div class = "contact>">
+        <div class="container">
+          <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+              <a href="mailto:anusha.bhatia30@gmail.com"><input type="submit" value="Submit"></a>
+          </form>
+        </div>
+      </div>
+
+            
+            
+            
+            
+            
+            </div> 
+          
+            
+            <div id = "project">
+            <div class = "row">
+                <a href = "madlibproject.html" target=”_blank”> <div id = "imageBox1" 
+                class = "imageBox"></div></a>
+                <a href = "outfit_picker/clothes.html" target=”_blank”> <div id = "imageBox2" class = "imageBox"></div>
+            </div>
+             <div class = "row">
+                 <a href = "painting.html" target=”_blank”> <div id = "imageBox3" class = "imageBox"></div>
+                 <a href = "painting.html" target=”_blank”> <div id = "imageBox4"class = "imageBox"></div>
+             </div>
+         </div>
+        </div>
+        
+        
+        
+       
+        
+      
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+
+
+</html>
